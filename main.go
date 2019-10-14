@@ -26,7 +26,7 @@ func main() {
 		_ = file.Close()
 	}()
 
-	y := lib.CreateAmiConverterStream(x)
+	y := lib.CreateNrzConverterStream(x)
 	err = lib.WriteSvg(file, x, y)
 
 	if err != nil {

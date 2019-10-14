@@ -68,7 +68,6 @@ func writePath(writer io.Writer, converterStream BitStreamConverterStream)error 
 
 	if !converterStream.Available() { return nil }
 	tk := converterStream.Next()
-	fmt.Println(tk)
 	posX := 0
 
 	_, err = fmt.Fprintf(writer, "M%d,%d L%d,%d", posX, getY(tk), posX+20, getY(tk))
@@ -81,7 +80,6 @@ func writePath(writer io.Writer, converterStream BitStreamConverterStream)error 
 
 	for converterStream.Available() {
 		tk = converterStream.Next()
-		fmt.Println(tk)
 		_, err = fmt.Fprintf(writer, " L%d,%d L%d,%d" , posX, getY(tk), posX+20, getY(tk))
 		if err != nil {
 			return err
