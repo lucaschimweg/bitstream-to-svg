@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/2000/svg">
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     height="80px"
+     width="100px">
+
+    <defs>
+        <style type="text/css">
+            text {
+                font-size: 15px;
+                font-family: monospace;
+            }
+        </style>
+    </defs>
+
+    <text x="5" y="15">1</text>
+    <text x="25" y="15">0</text>
+    <text x="45" y="15">1</text>
+    <text x="65" y="15">0</text>
+    <text x="85" y="15">1</text>
+
+    <path d="M0,30 L10,30 L10,30 L20,30 L20,70 L30,70 L30,70 L40,70" stroke="#000" fill="none" stroke-width="2px"/>
+</svg>

@@ -159,4 +159,17 @@ func CreateAmiConverterStream(stream BitStream) *AmiConverterStream {
 	return &AmiConverterStream{createBitStreamConverterBase(stream), 1}
 }
 
+func CreateConverterStream(name string, stream BitStream) (BitStreamConverterStream,error) {
+	switch name {
+	case "nrz":
+		return CreateNrzConverterStream(stream), nil
+	case "nrzi":
+		return CreateNrziConverterStream(stream), nil
+	case "ami":
+		return CreateNrziConverterStream(stream), nil
+	case "manchester":
+		return CreateManchesterConverterStream(stream), nil
+	}
+	return nil, errors.New("invalid encoding name")
+}
 
